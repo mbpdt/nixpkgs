@@ -16012,6 +16012,8 @@ in
 
   unit = callPackage ../servers/http/unit { };
 
+  ncdns = callPackage ../servers/dns/ncdns { };
+
   nginx = nginxStable;
 
   nginxStable = callPackage ../servers/http/nginx/stable.nix {
@@ -26142,7 +26144,7 @@ in
     inherit (darwin.apple_sdk.frameworks) Security;
   };
 
-  nix-linter = haskellPackages.callPackage ../development/tools/analysis/nix-linter { };
+  nix-linter = haskell.lib.justStaticExecutables (haskellPackages.callPackage ../development/tools/analysis/nix-linter { });
 
   nix-pin = callPackage ../tools/package-management/nix-pin { };
 
