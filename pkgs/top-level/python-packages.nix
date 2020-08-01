@@ -1106,6 +1106,8 @@ in {
 
   pyperf = callPackage ../development/python-modules/pyperf { };
 
+  pyphotonfile = callPackage ../development/python-modules/pyphotonfile { };
+
   pefile = callPackage ../development/python-modules/pefile { };
 
   perfplot = callPackage ../development/python-modules/perfplot { };
@@ -7676,6 +7678,8 @@ in {
   webrtcvad = callPackage ../development/python-modules/webrtcvad { };
 
   pykwalify = callPackage ../development/python-modules/pykwalify { };
+
+  west = callPackage ../development/python-modules/west { };
 
   wfuzz = callPackage ../development/python-modules/wfuzz { };
 

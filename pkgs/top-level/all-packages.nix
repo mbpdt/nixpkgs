@@ -3068,6 +3068,8 @@ in
 
   doom-bcc = callPackage ../games/zdoom/bcc-git.nix { };
 
+  sl1-to-photon = python3Packages.callPackage ../applications/misc/sl1-to-photon { };
+
   slade = callPackage ../applications/misc/slade {
     wxGTK = wxGTK30;
   };
@@ -16033,9 +16035,7 @@ in
 
   hiawatha = callPackage ../servers/http/hiawatha {};
 
-  home-assistant = callPackage ../servers/home-assistant {
-    python3 = python37;
-  };
+  home-assistant = callPackage ../servers/home-assistant { };
 
   home-assistant-cli = callPackage ../servers/home-assistant/cli.nix { };
 
@@ -19097,6 +19097,8 @@ in
 
   azpainter = callPackage ../applications/graphics/azpainter { };
 
+  bambootracker = libsForQt5.callPackage ../applications/audio/bambootracker { };
+
   cadence =  qt5.callPackage ../applications/audio/cadence { };
 
   cheesecutter = callPackage ../applications/audio/cheesecutter { };
@@ -22004,6 +22006,8 @@ in
   };
 
   pistol = callPackage ../tools/misc/pistol { };
+
+  plexamp = callPackage ../applications/audio/plexamp { };
 
   plex-media-player = libsForQt512.callPackage ../applications/video/plex-media-player { };
 
